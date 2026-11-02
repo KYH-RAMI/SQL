@@ -1,10 +1,10 @@
 ﻿/*
- * Uppgift 8
-SQLi-Labbet (Den sårbara koden). Skapa een C#-konsolapplikation i Visual Studio.
-Skriv en metod som tar en söksträng (e-post) via Console.ReadLine() och skickar den
-till databasen med en osäker, strängkonkaternerad ADO.NET-fråga.
-*/
-
+ * Lektion 2 – Uppgift 10
+ * Den tidigare SQL Injection-sårbarheten har åtgärdats
+ * genom att använda SqlParameter i stället för att
+ * lägga användarens text direkt i SQL-frågan.
+ */
+using System.Data;
 using Microsoft.Data.SqlClient;
 
 string connectionString =
@@ -27,10 +27,16 @@ SearchUserByEmail(connection, email);
 
 static void SearchUserByEmail(SqlConnection connection, string email)
 {
-    // Avsiktligt osäker SQL-fråga för uppgift 8
+    // Kontrollerad SQL-fråga för uppgift 10
     using var command = new SqlCommand(
-        $"SELECT * FROM dbo.Users WHERE Email = '{email}';",
+        "SELECT * FROM dbo.Users WHERE Email = @Email;",
         connection);
+
+    // Alternativ: AddWithValue(), men här anger jag datatyp och längd själv.
+
+    command.Parameters.Add("@Email", SqlDbType.NVarChar, 255).Value = email;
+
+    // command.Parameters.AddWithValue("@Email", email);
 
     using var reader = command.ExecuteReader();
 
