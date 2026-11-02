@@ -25,6 +25,8 @@ Console.WriteLine("Ange e-postadress: ");
 string email = Console.ReadLine() ?? string.Empty;
 SearchUserByEmail(connection, email);
 
+//RegisterServer(connection);
+
 static void SearchUserByEmail(SqlConnection connection, string email)
 {
     // Kontrollerad SQL-fråga för uppgift 10
@@ -56,4 +58,24 @@ static void SearchUserByEmail(SqlConnection connection, string email)
     {
         Console.WriteLine("Ingen användare hittades.");
     }
+}
+
+static void RegisterServer(SqlConnection connection)
+{
+    using var command = new SqlCommand(
+      "dbo.usp_RegisterServer", connection);
+
+    command.CommandType = CommandType.StoredProcedure;
+
+    command.Parameters.Add("@ServerName", SqlDbType.NVarChar, 100)
+    .Value = "WebServer-02";
+    command.Parameters.Add("@IpAddress", SqlDbType.NVarChar, 15)
+    .Value = "192.168.1.100";
+    command.Parameters.Add("@Environment", SqlDbType.NVarChar, 50)
+    .Value = "Production";
+    command.Parameters.Add("@ManagedByUserId", SqlDbType.Int)
+    .Value = 1;
+    command.ExecuteNonQuery();
+    Console.WriteLine("Servern har registrerats!");
+
 }
