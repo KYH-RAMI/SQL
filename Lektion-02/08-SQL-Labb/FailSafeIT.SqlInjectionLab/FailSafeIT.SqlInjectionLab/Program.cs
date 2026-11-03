@@ -21,11 +21,17 @@ using var command = new SqlCommand("SELECT COUNT(*) FROM dbo.Users;", connection
 Console.WriteLine($"Antal användare i databasen: {command.ExecuteScalar()}");
 */
 
-Console.WriteLine("Ange e-postadress: ");
-string email = Console.ReadLine() ?? string.Empty;
-SearchUserByEmail(connection, email);
+// Uppgift 10 – Sök användare
+// Console.Write("Ange e-postadress: ");
+// string email = Console.ReadLine() ?? string.Empty;
+// SearchUserByEmail(connection, email);
 
-//RegisterServer(connection);
+// Uppgift 13 – Testa serverregistrering
+Console.Write("Ange servernamn: ");
+string serverName = Console.ReadLine() ?? string.Empty;
+
+
+//RegisterServer(connection, serverName);
 
 static void SearchUserByEmail(SqlConnection connection, string email)
 {
@@ -60,7 +66,7 @@ static void SearchUserByEmail(SqlConnection connection, string email)
     }
 }
 
-static void RegisterServer(SqlConnection connection)
+static void RegisterServer(SqlConnection connection, string serverName)
 {
     using var command = new SqlCommand(
       "dbo.usp_RegisterServer", connection);
@@ -68,8 +74,8 @@ static void RegisterServer(SqlConnection connection)
     command.CommandType = CommandType.StoredProcedure;
 
     command.Parameters.Add("@ServerName", SqlDbType.NVarChar, 100)
-    .Value = "WebServer-02";
-    command.Parameters.Add("@IpAddress", SqlDbType.NVarChar, 15)
+    .Value = serverName;
+    command.Parameters.Add("@IpAddress", SqlDbType.VarChar, 15)
     .Value = "192.168.1.100";
     command.Parameters.Add("@Environment", SqlDbType.NVarChar, 50)
     .Value = "Production";
