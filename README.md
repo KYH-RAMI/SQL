@@ -6,6 +6,7 @@ SQL Server & T-SQL – Course exercises, database design and practical projects.
 
 - [Lektion 01](Lektion-01) – SQL Server, LocalDB, DDL & CRUD
 - [Lektion 02](Lektion-02) – SQL Injection, Stored Procedures, RPC & Least Privilege
+- [Lektion 03](Lektion-03) – Data Modeling, Relationships (1:1, 1:N, M:N), Normalization (1NF–3NF), Constraints & Database Security
 - [Inlämningsuppgift 1 – FailSafe IT](Inlamningsuppgift-1) – Relationsdatabas med ER-diagram, normalisering (3NF), SQL-frågor och DevSecOps-reflektion.
 
 ## Technologies
@@ -13,4 +14,5 @@ SQL Server & T-SQL – Course exercises, database design and practical projects.
 - Microsoft SQL Server
 - SQL Server Management Studio 22
 - T-SQL
+- SQLite / DB Browser for SQLite
 - .NET / Entity Framework Core
