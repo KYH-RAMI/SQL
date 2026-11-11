@@ -1,11 +1,30 @@
--- FailSafe IT – Inlämningsuppgift 1
--- Förutsättning: Databasen FailSafeIT_Local finns redan.
--- Kör skriptet mot en tom databas; CREATE TABLE och INSERT är inte avsedda att köras igen.
+-- =========================================================================
+-- FAILSAFE IT – INLÄMNINGSUPPGIFT 1
+-- Självständigt och upprepningsbart SQL-skript
+-- OBS: Databasen raderas och återskapas vid varje körning.
+-- =========================================================================
+
+USE master;
+GO
+
+IF DB_ID('FailSafeIT_Local') IS NOT NULL
+BEGIN
+    ALTER DATABASE FailSafeIT_Local
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
+    DROP DATABASE FailSafeIT_Local;
+END;
+GO
+
+CREATE DATABASE FailSafeIT_Local;
+GO
 
 USE FailSafeIT_Local;
 GO
 
+-- =========================================================================
 -- DEL 1: Skapa tabeller
+-- =========================================================================
 
 -- 1. Customers
 CREATE TABLE dbo.Customers
