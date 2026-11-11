@@ -8,6 +8,7 @@ SQL Server & T-SQL – Course exercises, database design and practical projects.
 - [Lektion 02](Lektion-02) – SQL Injection, Stored Procedures, RPC & Least Privilege
 - [Lektion 03](Lektion-03) – Data Modeling, Normalization (1NF–3NF), M:N Relationships, Constraints & Audit Logging
 - [Lektion 03 – Extra](Lektion-03-Extra) – Previous exercises covering relationships (1:1, 1:N, M:N), normalization and database security, including SQLite
+- [Lektion 04](Lektion-04) – Indexing (Heap, Clustered & Nonclustered), Execution Plans, Query Optimization, SARGability, Covering Indexes & Least Privilege
 - [Inlämningsuppgift 1 – FailSafe IT](Inlamningsuppgift-1) – Relational database with ER diagram, normalization (3NF), SQL queries and DevSecOps considerations.
 
 ## Technologies
