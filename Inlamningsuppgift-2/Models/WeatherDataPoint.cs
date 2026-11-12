@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace FailSafe_WeatherMonitor.Models
 {
-    internal class WeatherDataPoint
+    public class WeatherDataPoint
     {
+        public int Id { get; set; }
+        public string StationName { get; set; } = string.Empty;
+        public DateTime Timestamp { get; set; }
+        public double Temperature { get; set; }
+        public double Humidity { get; set; }
+        public string DataSource { get; set; } = string.Empty;
+
     }
 }
