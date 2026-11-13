@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace FailSafe_WeatherMonitor.Services
+using FailSafe_WeatherMonitor.Models;
+using FailSafe_WeatherMonitor.UI;
+namespace FailSafe_WeatherMonitor.UI
 {
-    using System;
-
     internal static class Menu
     {
         private static readonly string[] MenuOptions =
@@ -14,7 +13,7 @@ namespace FailSafe_WeatherMonitor.Services
         "Exit"
     };
 
-        public static void Show()
+        public static async Task ShowAsync()
         {
             int selectedIndex = 0;
 
@@ -34,10 +33,7 @@ namespace FailSafe_WeatherMonitor.Services
                     switch(selectedOption)
                     {
                         case "View Weather Data":
-                            
-                            AppTheme.ShowNotice(
-                                "WEATHER DATA",
-                                "This feature is under development.");
+                            await WeatherScreen.ShowAsync();
                             break;
 
                         case "Exit":

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FailSafe_WeatherMonitor.Services
+namespace FailSafe_WeatherMonitor.UI
 {
 
     internal static class AppTheme
@@ -368,8 +368,16 @@ namespace FailSafe_WeatherMonitor.Services
 
         public static void ShowNotice(
             string title,
-            string message)
+            string message,
+            NoticeType type = NoticeType.Info)
         {
+            string noticeColor = type switch
+            {
+                NoticeType.Success => "green",
+                NoticeType.Error => "red",
+                _ => Text
+            };
+
             PrepareScreen();
 
             if(Console.WindowWidth < PanelWidth + 2 ||
@@ -379,7 +387,7 @@ namespace FailSafe_WeatherMonitor.Services
                     $"[bold {Sky}]{Markup.Escape(title)}[/]");
 
                 AnsiConsole.MarkupLine(
-                    $"\n[{Text}]{Markup.Escape(message)}[/]");
+                    $"\n[{noticeColor}]{Markup.Escape(message)}[/]");
 
                 AnsiConsole.MarkupLine(
                     $"\n[{Muted}]Press any key to continue...[/]");
@@ -412,12 +420,19 @@ namespace FailSafe_WeatherMonitor.Services
                 Sky,
                 true);
 
-            WriteCentered(
-                left,
-                top + 11,
-                PanelWidth,
-                message,
-                Text);
+            // Dela upp meddelandet i separata rader.
+            string[] lines = message.Split('\n');
+
+            // Skriv varje rad centrerad.
+            for(int i = 0; i < lines.Length; i++)
+            {
+                WriteCentered(
+                    left,
+                    top + 11 + i,
+                    PanelWidth,
+                    lines[i].TrimEnd('\r'),
+                    noticeColor);
+            }
 
             WriteCentered(
                 left,

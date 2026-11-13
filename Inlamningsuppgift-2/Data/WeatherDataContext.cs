@@ -22,5 +22,6 @@ namespace FailSafe_WeatherMonitor.Data
             // 3. Konfigurera SQL Server
             optionsBuilder.UseSqlServer(connectionString);
         }
+
     }
 }

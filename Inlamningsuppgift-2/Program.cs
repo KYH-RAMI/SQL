@@ -1,4 +1,4 @@
-﻿using FailSafe_WeatherMonitor.Services;
+﻿using FailSafe_WeatherMonitor.UI;
 using Spectre.Console;
 using System.IO;
 using System.Runtime.ConstrainedExecution;
@@ -10,4 +10,4 @@ Console.InputEncoding = Encoding.UTF8;
 
 
 
-Menu.Show();
+await Menu.ShowAsync();
