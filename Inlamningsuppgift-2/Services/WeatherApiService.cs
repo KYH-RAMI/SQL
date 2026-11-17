@@ -1,40 +1,31 @@
-﻿using System.Net.Http;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Json;
 using System.Text.Json;
 using FailSafe_WeatherMonitor.Models;
 
-namespace FailSafe_WeatherMonitor.Services
+namespace FailSafe_WeatherMonitor.Services;
+
+internal class WeatherApiService
 {
-    internal class WeatherApiService
+    private static readonly HttpClient _httpClient = new();
+
+    private const string ApiUrl =
+        "https://api.open-meteo.com/v1/forecast?latitude=59.33&longitude=18.06&current=temperature_2m%2Crelative_humidity_2m&timezone=Europe%2FStockholm";
+
+    public async Task<OpenMeteoResponse?> GetWeatherAsync()
     {
-        private readonly HttpClient _httpClient = new HttpClient();
-      
-        public async Task<OpenMeteoResponse?> GetWeatherAsync()
+        try
         {
-            try
-            {
-                using var response = await _httpClient.GetAsync("https://api.open-meteo.com/v1/forecast?latitude=59.33&longitude=18.06&current=temperature_2m%2Crelative_humidity_2m&timezone=Europe%2FStockholm");
-                response.EnsureSuccessStatusCode();
-                var content = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<OpenMeteoResponse>(content);
-            }
-            catch (HttpRequestException ex)
-            {
-                throw new InvalidOperationException("Failed to fetch weather data.", ex);
-            }
+            return await _httpClient.GetFromJsonAsync<OpenMeteoResponse>(ApiUrl);
         }
-        public async Task SaveWeatherAsync(OpenMeteoResponse weatherData)
+        catch(HttpRequestException ex)
         {
-            // Här ska du själv skriva logiken för att:
-            // 1. Kontrollera att Current finns.
-            // 2. Skapa ett WeatherDataPoint-objekt.
-            // 3. Spara objektet med EF Core.
-            if(weatherData?.Current == null)
-            {
-                throw new InvalidOperationException("Current weather data is missing.");
-            }
-             
+            throw new InvalidOperationException(
+                "Failed to retrieve weather data from the API.", ex);
+        }
+        catch(JsonException ex)
+        {
+            throw new InvalidOperationException(
+                "The weather API returned invalid JSON data.", ex);
         }
     }
 }
-

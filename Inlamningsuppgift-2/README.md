@@ -1,92 +1,92 @@
 ﻿# FailSafe WeatherMonitor
 
-En konsolapplikation utvecklad i **C# och .NET 10** för att samla in, lagra och analysera väderdata.
+A C# console application built with **.NET 11** for collecting, importing, storing and monitoring weather data.
 
-Projektet är en del av utbildningen **Systemutvecklare DevSecOps vid KYH** och utvecklas stegvis med fokus på objektorientering, databashantering, felhantering och tydlig kodstruktur.
+The project is part of the **Systemutvecklare DevSecOps programme at KYH** and focuses on object-oriented programming, database management, API integration and reliable data handling.
 
-## Tekniker
+## Technologies
 
-- **C# / .NET 10** – applikationsutveckling
-- **Spectre.Console** – interaktivt konsolgränssnitt
-- **Entity Framework Core** – databashantering med Code First
-- **SQL Server LocalDB** – lokal databas
-- **Open-Meteo API** – aktuell väderinformation
-- **JSON** – API-data och applikationskonfiguration
-- **Async / Await** – asynkron programmering
+- **C# / .NET 11** – Application development
+- **Entity Framework Core 11** – Database management and Code First
+- **SQL Server LocalDB** – Local database
+- **Microsoft Azure SQL** – Cloud database integration
+- **Spectre.Console** – Interactive console interface
+- **Open-Meteo API** – Weather data provider
+- **System.Text.Json** – JSON parsing and serialization
+- **LINQ** – Data querying and filtering
 
-## Projektstruktur
+## Features
 
-| Mapp / Fil | Beskrivning |
-|---|---|
-| `Program.cs` | Applikationens startpunkt |
-| `Models/` | API-modeller och databasmodeller |
-| `Data/WeatherDataContext.cs` | EF Core DbContext |
-| `Migrations/` | Databasens versionshantering |
-| `Services/WeatherApiService.cs` | Kommunikation med Open-Meteo |
-| `Services/WeatherService.cs` | Väderlogik, mapping och databaslagring |
-| `UI/Menu.cs` | Huvudmeny och navigering |
-| `UI/WeatherScreen.cs` | Presentation av väderinformation |
-| `UI/AppTheme.cs` | Gemensam konsoldesign och färghantering |
-| `UI/NoticeType.cs` | Meddelandetyper för gränssnittet |
-| `appsettings.json` | Lokal databaskonfiguration |
+- Retrieve current weather data through Open-Meteo API.
+- Import historical weather data from JSON files.
+- Validate and filter incoming weather measurements.
+- Detect duplicate records using station name and timestamp.
+- Store weather data using Entity Framework Core.
+- Log rejected records for further inspection.
+- Display weather information through a custom console interface.
 
-## Implementerat
+## Project Structure
 
-- Projektstruktur med separerade ansvarsområden
-- Interaktiv konsolmeny
-- Anpassad konsoldesign
-- API-integration med Open-Meteo
-- JSON-deserialisering
-- EF Core Code First
+```text
+FailSafe WeatherMonitor/
+│
+├── Data/
+│   ├── WeatherDataContext.cs
+│   └── weather_data.json
+│
+├── Migrations/
+│
+├── Models/
+│   ├── CurrentWeather.cs
+│   ├── OpenMeteoResponse.cs
+│   └── WeatherDataPoint.cs
+│
+├── Services/
+│   ├── ImportService.cs
+│   ├── WeatherApiService.cs
+│   └── WeatherService.cs
+│
+├── UI/
+│   ├── AppTheme.cs
+│   ├── Menu.cs
+│   ├── NoticeType.cs
+│   └── WeatherScreen.cs
+│
+├── Program.cs
+├── appsettings.json
+├── appsettings.Production.json
+└── README.md
+```
+
+## Getting Started
+
+**Requirements**
+- .NET 11 SDK
 - SQL Server LocalDB
-- InitialCreate-migration
-- Mapping mellan API-modell och databasmodell
-- Implementerad kod för asynkron databaslagring
-- Dubblettkontroll baserad på station och tidstämpel
-- Statusmeddelanden för information, framgång och fel
+- Visual Studio 2026 or compatible development environment
 
+Configure the database connection in `appsettings.json`.
 
-## Återstående arbete
+Clone the repository and run:
 
-- Verifiera att API-data sparas korrekt i SQL Server
-- Förbättra felhantering och tidszonshantering
-- Implementera import av historisk JSON-data
-- Validera och hantera korrupta mätvärden
-- Implementera felloggning till `bad_data.log`
-- Visa väderstatistik med LINQ
-- Testa och konfigurera molndatabas
-- Slutföra dokumentation och tester
+```bash
+dotnet restore
+dotnet build
+dotnet run
+```
 
-## Köra projektet lokalt
+Database migrations are applied automatically when the application starts.
 
-Projektet använder .NET 10 och SQL Server LocalDB.
+## Azure SQL Demonstration
 
-Databasanslutningen konfigureras i `appsettings.json`.
+Cloud database integration will be demonstrated using Microsoft Azure SQL Database.
 
-EF Core-migrationer används för att skapa och uppdatera databasstrukturen.
+The demonstration will document the database configuration, EF Core migrations and successful import of weather data into the cloud database.
 
-Projektet är fortfarande under utveckling och alla funktioner är ännu inte färdigtestade.
+<!-- Azure screenshots will be added here after verification. -->
 
-## Dokumentation
+## Project Status
 
-Applikationen utvecklas med fokus på **Separation of Concerns**, där presentation, programlogik, externa API-anrop och databashantering har olika ansvarsområden.
+Under development as part of the Systemutvecklare DevSecOps programme at KYH.
 
-Vissa gränssnittskomponenter har vidareutvecklats från ett tidigare privat C#-övningsprojekt och anpassats till WeatherMonitor.
-
-## Källor och studiematerial
-
-Följande resurser används som studiematerial och tekniska referenser under utvecklingen.
-
-| Område | Källa |
-|---|---|
-| Entity Framework Core | [EF Core for Beginners – Microsoft](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXCPdC3fTFA3Z79-eVH3K-s) |
-| EF Core Migrations | [Entity Framework Migrations Explained – Microsoft](https://learn.microsoft.com/en-us/shows/on-dotnet/entity-framework-migrations-explained) |
-| C# och LINQ | [C# Advanced – Microsoft Learn](https://learn.microsoft.com/en-us/shows/C-Advanced/) |
-| LINQ | [LINQ for Lists – IAmTimCorey](https://www.youtube.com/watch?v=yClSNQdVD7g) |
-| Async / Await | [C# Async / Await – IAmTimCorey](https://www.youtube.com/watch?v=2moh18sh5p4) |
-| HTTP och API | [HTTP requests in .NET – Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient) |
-| API-anrop i C# | [How To Call An API in C# – IAmTimCorey](https://www.youtube.com/watch?v=aWePkE2ReGw) |
-
----
-
-**Status:** Under utveckling.
+**Author:** Rami Issa

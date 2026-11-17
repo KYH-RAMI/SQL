@@ -1,13 +1,17 @@
-﻿using FailSafe_WeatherMonitor.UI;
-using Spectre.Console;
-using System.IO;
-using System.Runtime.ConstrainedExecution;
+﻿using FailSafe_WeatherMonitor.Data;
+using FailSafe_WeatherMonitor.UI;
+using Microsoft.EntityFrameworkCore;
 using System.Text;
-using System.Text.Json;
+
 Console.Title = "FailSafe WeatherMonitor | Rami Issa";
 Console.OutputEncoding = Encoding.UTF8;
 Console.InputEncoding = Encoding.UTF8;
 
+// Säkerställ att databasen har aktuella migreringar
+await using(var db = new WeatherDataContext())
+{
+    await db.Database.MigrateAsync();
+}
 
-
+// Starta huvudmenyn
 await Menu.ShowAsync();

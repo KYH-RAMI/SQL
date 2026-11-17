@@ -1,88 +1,1202 @@
 [
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 08:00:00", "Temperature": -2.8, "Humidity": 83.4 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 09:00:00", "Temperature": -0.54, "Humidity": 83.1 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 09:00:00", "Temperature": 9.813, "Humidity": 74.5 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-01 09:00:00", "Temperature": 3.4, "Humidity": 51.3 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 10:00:00", "Temperature": -0.35, "Humidity": 77.1 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-01 10:00:00", "Temperature": -1.023, "Humidity": 79.2 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-01 10:00:00", "Temperature": 3.4, "Humidity": 70.2 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 11:00:00", "Temperature": "N/A_TEMP", "Humidity": 50.3 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-01 11:00:00", "Temperature": -1.807, "Humidity": 69.0 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 11:00:00", "Temperature": -1.9, "Humidity": 93.1 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 12:00:00", "Temperature": -2.96, "Humidity": 67.1 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 12:00:00", "Temperature": 11.95, "Humidity": 77.2 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-01 12:00:00", "Temperature": -4.1, "Humidity": 70.7 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-01 13:00:00", "Temperature": 14.46, "Humidity": 67.0 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-01 13:00:00", "Temperature": 0.864, "Humidity": 78.3 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-01 13:00:00", "Temperature": 2.2, "Humidity": 58.7 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-01 14:00:00", "Temperature": -4.08, "Humidity": 60.3 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 14:00:00", "Temperature": 14.704, "Humidity": 88.5 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-01 14:00:00", "Temperature": -3.0, "Humidity": 62.5 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 15:00:00", "Temperature": 11.68, "Humidity": 57.3 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 15:00:00", "Temperature": -0.81, "Humidity": "62,0" },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 15:00:00", "Temperature": 8.0, "Humidity": 77.4 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 16:00:00", "Temperature": 5.68, "Humidity": 61.0 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-01 16:00:00", "Temperature": 2.589, "Humidity": 94.5 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 16:00:00", "Temperature": 8.8, "Humidity": 59.9 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 17:00:00", "Temperature": 11.86, "Humidity": 84.9 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 17:00:00", "Temperature": 11.436, "Humidity": 86.2 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-01 17:00:00", "Temperature": 0.4, "Humidity": 59.5 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-01 18:00:00", "Temperature": null, "Humidity": 64.2 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 18:00:00", "Temperature": 4.985, "Humidity": 89.8 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 18:00:00", "Temperature": 4.2, "Humidity": "61,9" },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 19:00:00", "Temperature": 9.9, "Humidity": 74.3 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 19:00:00", "Temperature": 6.692, "Humidity": 90.4 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-01 19:00:00", "Temperature": 2.2, "Humidity": 94.9 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 20:00:00", "Temperature": 5.19, "Humidity": 54.1 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-01 20:00:00", "Temperature": 12.222, "Humidity": 56.9 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 20:00:00", "Temperature": 10.8, "Humidity": 69.0 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-01 21:00:00", "Temperature": 2.7, "Humidity": 76.8 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-01 21:00:00", "Temperature": 5.582, "Humidity": 93.7 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-01 21:00:00", "Temperature": 13.8, "Humidity": 80.6 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-01 22:00:00", "Temperature": 8.63, "Humidity": 74.2 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 22:00:00", "Temperature": 10.372, "Humidity": 65.3 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-01 22:00:00", "Temperature": "3,7", "Humidity": 70.4 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 23:00:00", "Temperature": 11.3, "Humidity": 94.7 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-01 23:00:00", "Temperature": 4.15, "Humidity": 94.1 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-01 23:00:00", "Temperature": 5.856, "Humidity": 51.7 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 00:00:00", "Temperature": 6.3, "Humidity": 94.0 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 00:00:00", "Temperature": 0.44, "Humidity": 83.1 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 00:00:00", "Temperature": 12.91, "Humidity": 74.8 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 01:00:00", "Temperature": 5.6, "Humidity": 56.1 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-02 01:00:00", "Temperature": 8.95, "Humidity": 76.6 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 01:00:00", "Temperature": -0.2, "Humidity": null },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-02 02:00:00", "Temperature": 14.9, "Humidity": 54.0 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-02 02:00:00", "Temperature": 2.65, "Humidity": 94.1 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 02:00:00", "Temperature": 5.451, "Humidity": 80.5 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-02 03:00:00", "Temperature": 7.7, "Humidity": 78.8 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 03:00:00", "Temperature": 14.47, "Humidity": 62.6 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-02 03:00:00", "Temperature": 4.526, "Humidity": 80.3 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-02 04:00:00", "Temperature": 14.9, "Humidity": 82.5 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-02 04:00:00", "Temperature": 0.74, "Humidity": 63.6 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 04:00:00", "Temperature": 7.514, "Humidity": 70.9 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 05:00:00", "Temperature": 6.8, "Humidity": 69.4 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-02 05:00:00", "Temperature": 13.16, "Humidity": 88.7 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 05:00:00", "Temperature": 3.967, "Humidity": 66.2 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-02 06:00:00", "Temperature": 9.8, "Humidity": 61.1 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-02 06:00:00", "Temperature": 3.46, "Humidity": 80.6 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 06:00:00", "Temperature": 14.004, "Humidity": 85.6 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 07:00:00", "Temperature": 6.4, "Humidity": 55.2 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 07:00:00", "Temperature": 5.77, "Humidity": 81.8 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 07:00:00", "Temperature": 13.627, "Humidity": 90.3 },
-  { "StationName": "Snavlunda_Drift", "Timestamp": "2026-11-02 08:00:00", "Temperature": 8.6, "Humidity": 63.2 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 08:00:00", "Temperature": 14.39, "Humidity": 68.4 },
-  { "StationName": "Malmo_Hamn", "Timestamp": "2026-11-02 08:00:00", "Temperature": 11.458, "Humidity": 67.1 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 09:00:00", "Temperature": 7.2, "Humidity": 77.1 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-02 09:00:00", "Temperature": 13.43, "Humidity": 51.8 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 09:00:00", "Temperature": 12.873, "Humidity": 64.8 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-02 10:00:00", "Temperature": 13.9, "Humidity": 58.7 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 10:00:00", "Temperature": 13.56, "Humidity": 64.8 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-02 10:00:00", "Temperature": 3.297, "Humidity": 64.5 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 11:00:00", "Temperature": 12.2, "Humidity": 53.6 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 11:00:00", "Temperature": 999.9, "Humidity": 88.9 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 11:00:00", "Temperature": 10.877, "Humidity": 55.8 },
-  { "StationName": "Stockholm_Centrum", "Timestamp": "2026-11-02 12:00:00", "Temperature": 8.8, "Humidity": 70.6 },
-  { "StationName": "Vasteras_Flyg", "Timestamp": "2026-11-02 12:00:00", "Temperature": 11.23, "Humidity": 63.0 },
-  { "StationName": "Goteborg_Avenyn", "Timestamp": "2026-11-02 12:00:00", "Temperature": 4.723, "Humidity": 88.3 },
-  { "StationName": "Kiruna_Flygplats", "Timestamp": "2026-11-02 13:00:00", "Temperature": 2.4, "Humidity": 74.6 },
-  { "StationName": "Uppsala_Teknat", "Timestamp": "2026-11-02 13:00:00", "Temperature": 2.03, "Humidity": 58.1 },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-01 08:00:00",
+    "Temperature": 6.86,
+    "Humidity": 62.6
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-01 09:00:00",
+    "Temperature": -1.557,
+    "Humidity": 95.0
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-01 09:00:00",
+    "Temperature": -3.2,
+    "Humidity": 84.1
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-01 09:00:00",
+    "Temperature": 14.2,
+    "Humidity": 51.4
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-01 11:00:00",
+    "Temperature": 4.876,
+    "Humidity": 76.1
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-01 14:00:00",
+    "Temperature": 4.7,
+    "Humidity": 62.3
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-01 15:00:00",
+    "Temperature": 12.62,
+    "Humidity": 81.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-01 15:00:00",
+    "Temperature": "N/A_TEMP",
+    "Humidity": 53.6
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-01 16:00:00",
+    "Temperature": 9.065,
+    "Humidity": 55.5
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-01 18:00:00",
+    "Temperature": 8.322,
+    "Humidity": 91.4
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-01 18:00:00",
+    "Temperature": 9.2,
+    "Humidity": null
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-01 18:00:00",
+    "Temperature": -0.05,
+    "Humidity": null
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-01 18:00:00",
+    "Temperature": 11.0,
+    "Humidity": 83.8
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-01 19:00:00",
+    "Temperature": 2.49,
+    "Humidity": 93.4
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-01 20:00:00",
+    "Temperature": -0.4,
+    "Humidity": 80.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-01 21:00:00",
+    "Temperature": -2.37,
+    "Humidity": 81.1
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-01 21:00:00",
+    "Temperature": 2.27,
+    "Humidity": 74.2
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 00:00:00",
+    "Temperature": -2.768,
+    "Humidity": 52.5
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 00:00:00",
+    "Temperature": 4.382,
+    "Humidity": 59.5
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 01:00:00",
+    "Temperature": -4.0,
+    "Humidity": 55.1
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 01:00:00",
+    "Temperature": 5.82,
+    "Humidity": 93.7
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 01:00:00",
+    "Temperature": 999.9,
+    "Humidity": 93.5
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-02 02:00:00",
+    "Temperature": 3.117,
+    "Humidity": 69.8
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 02:00:00",
+    "Temperature": 9.75,
+    "Humidity": 94.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 03:00:00",
+    "Temperature": -0.0,
+    "Humidity": 64.5
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 03:00:00",
+    "Temperature": 10.01,
+    "Humidity": 86.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 03:00:00",
+    "Temperature": 13.362,
+    "Humidity": 58.9
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-02 04:00:00",
+    "Temperature": 7.9,
+    "Humidity": 62.8
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 04:00:00",
+    "Temperature": -2.3,
+    "Humidity": 74.9
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 04:00:00",
+    "Temperature": 1.15,
+    "Humidity": 73.1
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-02 04:00:00",
+    "Temperature": -0.5,
+    "Humidity": 51.1
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 04:00:00",
+    "Temperature": 6.1,
+    "Humidity": 60.7
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 05:00:00",
+    "Temperature": 11.516,
+    "Humidity": 86.8
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 05:00:00",
+    "Temperature": -4.453,
+    "Humidity": 59.2
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 05:00:00",
+    "Temperature": 7.12,
+    "Humidity": 68.1
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 06:00:00",
+    "Temperature": 0.278,
+    "Humidity": 76.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-02 06:00:00",
+    "Temperature": 9.7,
+    "Humidity": 72.1
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-02 07:00:00",
+    "Temperature": -4.307,
+    "Humidity": 74.1
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 07:00:00",
+    "Temperature": 12.98,
+    "Humidity": 72.7
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 07:00:00",
+    "Temperature": 0.135,
+    "Humidity": 68.9
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-02 08:00:00",
+    "Temperature": 13.46,
+    "Humidity": 93.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 08:00:00",
+    "Temperature": 10.81,
+    "Humidity": 53.7
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 08:00:00",
+    "Temperature": 0.05,
+    "Humidity": "93,0"
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 09:00:00",
+    "Temperature": 12.9,
+    "Humidity": 83.2
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 10:00:00",
+    "Temperature": -4.28,
+    "Humidity": 88.5
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 10:00:00",
+    "Temperature": 5.44,
+    "Humidity": 78.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-02 11:00:00",
+    "Temperature": -0.939,
+    "Humidity": 59.3
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 11:00:00",
+    "Temperature": 14.1,
+    "Humidity": 64.9
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 11:00:00",
+    "Temperature": 5.3,
+    "Humidity": 53.7
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 11:00:00",
+    "Temperature": 1.021,
+    "Humidity": 76.8
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 11:00:00",
+    "Temperature": 13.7,
+    "Humidity": 67.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 12:00:00",
+    "Temperature": 13.17,
+    "Humidity": 88.0
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 13:00:00",
+    "Temperature": 10.0,
+    "Humidity": 65.6
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 13:00:00",
+    "Temperature": 14.7,
+    "Humidity": 91.7
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 14:00:00",
+    "Temperature": 1.15,
+    "Humidity": 79.2
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 15:00:00",
+    "Temperature": 0.8,
+    "Humidity": 58.5
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 16:00:00",
+    "Temperature": -1.74,
+    "Humidity": 92.2
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 16:00:00",
+    "Temperature": 8.08,
+    "Humidity": 65.5
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-02 16:00:00",
+    "Temperature": 3.7,
+    "Humidity": 66.3
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 17:00:00",
+    "Temperature": null,
+    "Humidity": 74.1
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 17:00:00",
+    "Temperature": 4.52,
+    "Humidity": 88.0
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 18:00:00",
+    "Temperature": 11.67,
+    "Humidity": 64.7
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-02 18:00:00",
+    "Temperature": 2.779,
+    "Humidity": 51.6
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-02 19:00:00",
+    "Temperature": 13.1,
+    "Humidity": 83.7
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 19:00:00",
+    "Temperature": 12.373,
+    "Humidity": 85.3
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-02 19:00:00",
+    "Temperature": 11.2,
+    "Humidity": 91.5
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-02 20:00:00",
+    "Temperature": 3.6,
+    "Humidity": 94.3
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-02 20:00:00",
+    "Temperature": 5.7,
+    "Humidity": 57.2
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-02 21:00:00",
+    "Temperature": 6.149,
+    "Humidity": 56.6
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-02 21:00:00",
+    "Temperature": 10.69,
+    "Humidity": 71.5
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-02 23:00:00",
+    "Temperature": 10.198,
+    "Humidity": 59.3
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-03 00:00:00",
+    "Temperature": -1.209,
+    "Humidity": 90.8
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 00:00:00",
+    "Temperature": -0.69,
+    "Humidity": 59.1
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-03 02:00:00",
+    "Temperature": -0.934,
+    "Humidity": 65.2
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 03:00:00",
+    "Temperature": 10.1,
+    "Humidity": 65.1
+  },
+  {
+    "StationName": null,
+    "Timestamp": "2026-11-03 03:00:00",
+    "Temperature": -1.1,
+    "Humidity": 53.3
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-03 04:00:00",
+    "Temperature": 14.217,
+    "Humidity": 54.8
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 06:00:00",
+    "Temperature": 14.089,
+    "Humidity": 80.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 06:00:00",
+    "Temperature": 3.108,
+    "Humidity": 54.6
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-03 06:00:00",
+    "Temperature": 11.63,
+    "Humidity": 77.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-03 08:00:00",
+    "Temperature": 10.5,
+    "Humidity": 64.8
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-03 09:00:00",
+    "Temperature": 1.341,
+    "Humidity": 71.1
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-03 12:00:00",
+    "Temperature": 8.36,
+    "Humidity": 59.3
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 13:00:00",
+    "Temperature": 7.55,
+    "Humidity": 54.2
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 14:00:00",
+    "Temperature": 2.3,
+    "Humidity": 77.8
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 15:00:00",
+    "Temperature": 1.146,
+    "Humidity": 88.5
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 16:00:00",
+    "Temperature": 12.15,
+    "Humidity": 90.2
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-03 16:00:00",
+    "Temperature": 13.4,
+    "Humidity": 81.2
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 17:00:00",
+    "Temperature": -3.875,
+    "Humidity": 84.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 17:00:00",
+    "Temperature": 13.5,
+    "Humidity": 68.6
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 18:00:00",
+    "Temperature": 5.03,
+    "Humidity": 87.5
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-03 18:00:00",
+    "Temperature": -2.3,
+    "Humidity": 85.3
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-03 19:00:00",
+    "Temperature": 13.9,
+    "Humidity": 75.7
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-03 20:00:00",
+    "Temperature": 7.02,
+    "Humidity": 88.2
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-03 20:00:00",
+    "Temperature": 2.8,
+    "Humidity": 55.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-03 20:00:00",
+    "Temperature": 13.79,
+    "Humidity": 90.7
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 21:00:00",
+    "Temperature": 11.01,
+    "Humidity": 85.1
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-03 22:00:00",
+    "Temperature": 12.1,
+    "Humidity": 62.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-03 22:00:00",
+    "Temperature": -0.4,
+    "Humidity": 70.4
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-03 22:00:00",
+    "Temperature": 4.28,
+    "Humidity": 67.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-03 23:00:00",
+    "Temperature": 999.9,
+    "Humidity": 83.6
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-03 23:00:00",
+    "Temperature": -0.8,
+    "Humidity": 71.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 00:00:00",
+    "Temperature": 13.32,
+    "Humidity": 54.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 00:00:00",
+    "Temperature": 12.002,
+    "Humidity": 71.7
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-04 01:00:00",
+    "Temperature": 1.3,
+    "Humidity": 72.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 01:00:00",
+    "Temperature": 9.2,
+    "Humidity": 72.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 01:00:00",
+    "Temperature": -0.97,
+    "Humidity": 92.4
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 02:00:00",
+    "Temperature": 0.9,
+    "Humidity": 84.1
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-04 02:00:00",
+    "Temperature": -2.94,
+    "Humidity": 79.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 03:00:00",
+    "Temperature": 11.2,
+    "Humidity": 60.5
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-04 04:00:00",
+    "Temperature": -0.788,
+    "Humidity": 76.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 04:00:00",
+    "Temperature": 1.931,
+    "Humidity": 73.7
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 04:00:00",
+    "Temperature": 7.05,
+    "Humidity": 89.0
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 04:00:00",
+    "Temperature": 14.702,
+    "Humidity": 82.6
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-04 05:00:00",
+    "Temperature": null,
+    "Humidity": 61.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 05:00:00",
+    "Temperature": 0.0,
+    "Humidity": 72.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 06:00:00",
+    "Temperature": -0.37,
+    "Humidity": 76.0
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-04 06:00:00",
+    "Temperature": -3.952,
+    "Humidity": 54.9
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 06:00:00",
+    "Temperature": 8.31,
+    "Humidity": 57.7
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-04 07:00:00",
+    "Temperature": 8.6,
+    "Humidity": 60.9
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-04 09:00:00",
+    "Temperature": 14.65,
+    "Humidity": 60.4
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 10:00:00",
+    "Temperature": 15.0,
+    "Humidity": 61.3
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-04 10:00:00",
+    "Temperature": "1,645",
+    "Humidity": 56.8
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 11:00:00",
+    "Temperature": 3.3,
+    "Humidity": 80.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 12:00:00",
+    "Temperature": 11.4,
+    "Humidity": 88.5
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-04 12:00:00",
+    "Temperature": 14.377,
+    "Humidity": 51.9
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 12:00:00",
+    "Temperature": 7.9,
+    "Humidity": 83.0
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 13:00:00",
+    "Temperature": 1.79,
+    "Humidity": 92.3
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 13:00:00",
+    "Temperature": 14.173,
+    "Humidity": 85.2
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-04 13:00:00",
+    "Temperature": 2.6,
+    "Humidity": 84.8
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-04 13:00:00",
+    "Temperature": 1.7,
+    "Humidity": 58.8
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 14:00:00",
+    "Temperature": 9.834,
+    "Humidity": 68.0
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 14:00:00",
+    "Temperature": 9.136,
+    "Humidity": 85.1
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-04 15:00:00",
+    "Temperature": 5.7,
+    "Humidity": 70.4
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-04 15:00:00",
+    "Temperature": 12.08,
+    "Humidity": 59.1
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 17:00:00",
+    "Temperature": 0.2,
+    "Humidity": 67.9
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 17:00:00",
+    "Temperature": 9.73,
+    "Humidity": 77.1
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-04 18:00:00",
+    "Temperature": -0.159,
+    "Humidity": 81.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-04 19:00:00",
+    "Temperature": 10.05,
+    "Humidity": 69.8
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-04 20:00:00",
+    "Temperature": -0.35,
+    "Humidity": 59.6
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 21:00:00",
+    "Temperature": -0.22,
+    "Humidity": 87.0
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-04 21:00:00",
+    "Temperature": 2.1,
+    "Humidity": 74.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-04 22:00:00",
+    "Temperature": 8.63,
+    "Humidity": 50.7
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-04 23:00:00",
+    "Temperature": -1.34,
+    "Humidity": 94.7
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 00:00:00",
+    "Temperature": 10.19,
+    "Humidity": 93.8
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-05 00:00:00",
+    "Temperature": 14.53,
+    "Humidity": 63.0
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-05 00:00:00",
+    "Temperature": 13.3,
+    "Humidity": 66.1
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-05 01:00:00",
+    "Temperature": 4.463,
+    "Humidity": 75.8
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 01:00:00",
+    "Temperature": -3.74,
+    "Humidity": 50.3
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 01:00:00",
+    "Temperature": 6.6,
+    "Humidity": 89.5
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-05 02:00:00",
+    "Temperature": -0.14,
+    "Humidity": 90.0
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 02:00:00",
+    "Temperature": 13.287,
+    "Humidity": 63.3
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-05 02:00:00",
+    "Temperature": 13.5,
+    "Humidity": 67.2
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 02:00:00",
+    "Temperature": 5.4,
+    "Humidity": 72.5
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-05 03:00:00",
+    "Temperature": 9.81,
+    "Humidity": 54.3
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-05 03:00:00",
+    "Temperature": 3.11,
+    "Humidity": 65.1
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-05 04:00:00",
+    "Temperature": 2.889,
+    "Humidity": 90.0
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 04:00:00",
+    "Temperature": 13.75,
+    "Humidity": 65.4
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-05 05:00:00",
+    "Temperature": -0.751,
+    "Humidity": 72.1
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 05:00:00",
+    "Temperature": 11.9,
+    "Humidity": 86.6
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 05:00:00",
+    "Temperature": 2.6,
+    "Humidity": 86.9
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 06:00:00",
+    "Temperature": 2.43,
+    "Humidity": 55.8
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-05 08:00:00",
+    "Temperature": 13.494,
+    "Humidity": 88.8
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 08:00:00",
+    "Temperature": 14.04,
+    "Humidity": 56.3
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-05 09:00:00",
+    "Temperature": 7.507,
+    "Humidity": 86.1
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 10:00:00",
+    "Temperature": -4.3,
+    "Humidity": 77.9
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-05 10:00:00",
+    "Temperature": -2.826,
+    "Humidity": 65.6
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 11:00:00",
+    "Temperature": -3.55,
+    "Humidity": 65.5
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 12:00:00",
+    "Temperature": -4.3,
+    "Humidity": 66.9
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-05 12:00:00",
+    "Temperature": 9.9,
+    "Humidity": 88.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-05 12:00:00",
+    "Temperature": 1.156,
+    "Humidity": 55.1
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-05 14:00:00",
+    "Temperature": -0.87,
+    "Humidity": 87.3
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 14:00:00",
+    "Temperature": -0.07,
+    "Humidity": 74.8
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-05 16:00:00",
+    "Temperature": 4.2,
+    "Humidity": 62.6
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-05 16:00:00",
+    "Temperature": 4.2,
+    "Humidity": 50.4
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 16:00:00",
+    "Temperature": 2.23,
+    "Humidity": 52.1
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-05 16:00:00",
+    "Temperature": "6,83",
+    "Humidity": 88.4
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 17:00:00",
+    "Temperature": -1.4,
+    "Humidity": 70.6
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-05 18:00:00",
+    "Temperature": "-3,976",
+    "Humidity": 72.2
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-05 19:00:00",
+    "Temperature": 13.21,
+    "Humidity": 94.5
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-05 19:00:00",
+    "Temperature": -4.21,
+    "Humidity": 77.2
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 19:00:00",
+    "Temperature": 11.4,
+    "Humidity": 72.5
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 20:00:00",
+    "Temperature": 8.7,
+    "Humidity": 75.4
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-05 20:00:00",
+    "Temperature": 2.5,
+    "Humidity": 76.1
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-05 21:00:00",
+    "Temperature": 11.9,
+    "Humidity": 84.1
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 21:00:00",
+    "Temperature": 14.071,
+    "Humidity": 63.3
+  },
+  {
+    "StationName": "Snavlunda_Drift",
+    "Timestamp": "2026-11-05 22:00:00",
+    "Temperature": "-0,998",
+    "Humidity": 83.5
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-05 22:00:00",
+    "Temperature": 10.0,
+    "Humidity": 84.4
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-05 23:00:00",
+    "Temperature": 13.629,
+    "Humidity": 57.0
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-06 03:00:00",
+    "Temperature": "N/A_TEMP",
+    "Humidity": 62.2
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-06 03:00:00",
+    "Temperature": 3.1,
+    "Humidity": 66.6
+  },
+  {
+    "StationName": "Kiruna_Flygplats",
+    "Timestamp": "2026-11-06 03:00:00",
+    "Temperature": -0.127,
+    "Humidity": 67.0
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-06 03:00:00",
+    "Temperature": 6.4,
+    "Humidity": 90.3
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-06 04:00:00",
+    "Temperature": 3.99,
+    "Humidity": 65.0
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-06 04:00:00",
+    "Temperature": 12.672,
+    "Humidity": 79.5
+  },
+  {
+    "StationName": "Vasteras_Flyg",
+    "Timestamp": "2026-11-06 04:00:00",
+    "Temperature": -3.758,
+    "Humidity": 71.1
+  },
+  {
+    "StationName": "Malmo_Hamn",
+    "Timestamp": "2026-11-06 05:00:00",
+    "Temperature": 7.37,
+    "Humidity": 85.6
+  },
+  {
+    "StationName": "Goteborg_Avenyn",
+    "Timestamp": "2026-11-06 06:00:00",
+    "Temperature": -3.32,
+    "Humidity": 67.0
+  },
+  {
+    "StationName": "Stockholm_Centrum",
+    "Timestamp": "2026-11-06 07:00:00",
+    "Temperature": 1.75,
+    "Humidity": 63.7
+  },
+  {
+    "StationName": "Uppsala_Teknat",
+    "Timestamp": "2026-11-06 07:00:00",
+    "Temperature": 12.292,
+    "Humidity": 51.8
+  }
+]

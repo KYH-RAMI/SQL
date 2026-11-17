@@ -19,6 +19,8 @@ namespace FailSafe_WeatherMonitor.UI
         public const string Accent = Sky;
         public const string Text = "#E9F4FB";
         public const string Muted = "#95AEC1";
+        public const string Success = "#7EE0A0";
+        public const string Error = "#FF7777";
         public const string Border = "#426E8E";
         public const string SelectionText = "#071321";
         public const int FormWidth = 62;
@@ -373,8 +375,8 @@ namespace FailSafe_WeatherMonitor.UI
         {
             string noticeColor = type switch
             {
-                NoticeType.Success => "green",
-                NoticeType.Error => "red",
+                NoticeType.Success => Success,
+                NoticeType.Error => Error,
                 _ => Text
             };
 
