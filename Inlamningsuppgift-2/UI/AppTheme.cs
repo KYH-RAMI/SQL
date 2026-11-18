@@ -1,8 +1,7 @@
 ﻿using Spectre.Console;
 using Spectre.Console.Rendering;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using FailSafe_WeatherMonitor.Models;
+using System.Globalization;
 
 namespace FailSafe_WeatherMonitor.UI
 {
@@ -368,10 +367,142 @@ namespace FailSafe_WeatherMonitor.UI
             }
         }
 
+        public static void ShowMeasurementsGrid(
+            string stationName,
+            IReadOnlyList<WeatherDataPoint> measurements)
+        {
+            const int maxPageSize = 10;
+            int pageSize = Math.Min(
+                maxPageSize,
+                Console.WindowHeight - 18);
+
+            if(Console.WindowWidth < PanelWidth + 2 || pageSize < 3)
+            {
+                ShowNotice(
+                    "WINDOW TOO SMALL",
+                    "Please enlarge the terminal window.",
+                    NoticeType.Info);
+
+                return;
+            }
+
+            int totalPages = Math.Max(
+                1,
+                (int)Math.Ceiling(measurements.Count / (double)pageSize));
+
+            int currentPage = 0;
+
+            while(true)
+            {
+                PrepareScreen();
+
+                int panelHeight = pageSize + 16;
+
+                int left = (Console.WindowWidth - PanelWidth) / 2;
+                int top = (Console.WindowHeight - panelHeight) / 2;
+
+                DrawFrame(left, top, PanelWidth, panelHeight);
+
+                WriteGradientCentered(
+                    left,
+                    top + 2,
+                    PanelWidth,
+                    "WEATHER MEASUREMENTS");
+
+                DrawDivider(left, top + 5, PanelWidth);
+
+                WriteGradientCentered(
+                    left,
+                    top + 7,
+                    PanelWidth,
+                    stationName.ToUpperInvariant().Replace('_', ' '));
+
+                // Column headers
+                Console.SetCursorPosition(left + 4, top + 9);
+
+                WriteText(
+                    left + 4,
+                    top + 9,
+                    $"{"DATE / TIME",-15}" +
+                    $"{"TEMP",-9}" +
+                    $"{"HUMIDITY",-11}" +
+                    $"{"SOURCE"}",
+                    SkyLight,
+                    bold: true);
+
+                // Weather measurements
+                var pageItems = measurements
+                    .Skip(currentPage * pageSize)
+                    .Take(pageSize);
+
+                int rowIndex = 0;
+
+                foreach(var point in pageItems)
+                {
+                    string date = point.Timestamp.ToString(
+                        "dd MMM HH:mm",
+                        CultureInfo.InvariantCulture);
+
+                    string temperature = $"{point.Temperature.ToString("F1", CultureInfo.InvariantCulture)}°C";
+                    string humidity = $"{point.Humidity.ToString("F1", CultureInfo.InvariantCulture)}%";
+
+                    string source = point.DataSource ?? "-";
+
+                    if(source.Length > 14)
+                        source = source[..14];
+
+                    WriteText(
+                        left + 4,
+                        top + 11 + rowIndex,
+                        $"{date,-15}" +
+                        $"{temperature,-9}" +
+                        $"{humidity,-11}" +
+                        $"{source}",
+                        Text);
+                    
+                    rowIndex++;
+                }
+
+                WriteCentered(
+                    left,
+                    top + pageSize + 12,
+                    PanelWidth,
+                    $"Page {currentPage + 1} of {totalPages}  |  Total: {measurements.Count}",
+                    Muted);
+
+                WriteCentered(
+                    left,
+                    top + pageSize + 13,
+                    PanelWidth,
+                    "← Previous   → Next   |   Esc Stations",
+                    Muted);
+
+                ConsoleKey key = Console.ReadKey(intercept: true).Key;
+
+                switch(key)
+                {
+                    case ConsoleKey.RightArrow:
+                        if(currentPage < totalPages - 1)
+                            currentPage++;
+                        break;
+
+                    case ConsoleKey.LeftArrow:
+                        if(currentPage > 0)
+                            currentPage--;
+                        break;
+
+                    case ConsoleKey.Escape:
+                        return;
+                }
+            }
+        }
+
         public static void ShowNotice(
             string title,
             string message,
-            NoticeType type = NoticeType.Info)
+            NoticeType type = NoticeType.Info,
+            string? stationName = null,
+            string footerText = "Press any key to return to Main Menu")
         {
             string noticeColor = type switch
             {
@@ -406,6 +537,15 @@ namespace FailSafe_WeatherMonitor.UI
 
             DrawFrame(left, top, PanelWidth, PanelHeight);
 
+
+            if(!string.IsNullOrWhiteSpace(stationName))
+            {
+                WriteGradientCentered(
+                    left,
+                    top + 7,
+                    PanelWidth,
+                    stationName.ToUpperInvariant().Replace('_', ' '));
+            }
             WriteGradientCentered(
                 left,
                 top + 2,
@@ -440,7 +580,7 @@ namespace FailSafe_WeatherMonitor.UI
                 left,
                 top + 19,
                 PanelWidth,
-                "Press any key to return to Main Menu",
+                footerText,
                 Muted);
 
             _ = Console.ReadKey(intercept: true);
@@ -482,5 +622,146 @@ namespace FailSafe_WeatherMonitor.UI
             AnsiConsole.Write(
                 Align.Center(panel));
         }
+        public static string? ShowStationSelector(IReadOnlyList<string> stations)
+        {
+            if(stations.Count == 0)
+                return null;
+
+            const int visibleCount = 7;
+            const int optionWidth = 50;
+
+            int selectedIndex = 0;
+            int firstVisible = 0;
+
+            // Lägg till ett alternativ för att återgå.
+            var options = stations
+                .Append("Back to Main Menu")
+                .ToArray();
+
+            PrepareScreen();
+
+            if(Console.WindowWidth < PanelWidth + 2 ||
+               Console.WindowHeight < PanelHeight + 2)
+            {
+                ShowNotice(
+                    "WINDOW TOO SMALL",
+                    "Please enlarge the terminal window.",
+                    NoticeType.Info);
+
+                return null;
+            }
+
+            int left = (Console.WindowWidth - PanelWidth) / 2;
+            int top = (Console.WindowHeight - PanelHeight) / 2;
+
+            DrawFrame(left, top, PanelWidth, PanelHeight);
+
+            WriteGradientCentered(
+                left, top + 2, PanelWidth, "WEATHER STATISTICS");
+
+            DrawDivider(left, top + 5, PanelWidth);
+
+            WriteCentered(
+                left, top + 7, PanelWidth,
+                "SELECT WEATHER STATION", Sky, true);
+
+            WriteCentered(
+                left, top + 19, PanelWidth,
+                "↑ ↓ Navigate | Enter Select | Esc Back", Muted);
+
+            // Rita endast de alternativ som ryms i panelen.
+            void DrawOptions()
+            {
+                for(int row = 0; row < visibleCount; row++)
+                {
+                    int index = firstVisible + row;
+
+                    string text = "";
+
+                    if(index < options.Length)
+                    {
+                        string station = options[index];
+
+                        if(station.Length > optionWidth - 5)
+                            station = station[..(optionWidth - 6)] + "…";
+
+                        text = index == selectedIndex
+                            ? $" ❯ {station}"
+                            : $"   {station}";
+                    }
+
+                    WriteText(
+                        left + 6,
+                        top + 9 + row,
+                        text.PadRight(optionWidth),
+                        index == selectedIndex ? SelectionText : Text,
+                        index == selectedIndex ? Accent : Background,
+                        index == selectedIndex);
+                }
+
+                string pageInfo =
+                    $"{firstVisible + 1}–" +
+                    $"{Math.Min(firstVisible + visibleCount, options.Length)}" +
+                    $" of {options.Length} choices";
+
+                WriteText(
+                    left + 6,
+                    top + 17,
+                    new string(' ', optionWidth),
+                    Muted);
+
+                WriteCentered(
+                    left,
+                    top + 17,
+                    PanelWidth,
+                    pageInfo,
+                    Muted);
+            }
+
+            DrawOptions();
+
+            while(true)
+            {
+                ConsoleKey key = Console.ReadKey(intercept: true).Key;
+
+                if(key == ConsoleKey.Escape)
+                    return null;
+
+                if(key == ConsoleKey.Enter)
+                {
+                    // Sista alternativet betyder tillbaka.
+                    return selectedIndex == stations.Count
+                        ? null
+                        : stations[selectedIndex];
+                }
+
+                int nextIndex = key switch
+                {
+                    ConsoleKey.UpArrow =>
+                        (selectedIndex - 1 + options.Length) % options.Length,
+
+                    ConsoleKey.DownArrow =>
+                        (selectedIndex + 1) % options.Length,
+
+                    _ => selectedIndex
+                };
+
+                if(nextIndex == selectedIndex)
+                    continue;
+
+                selectedIndex = nextIndex;
+
+                // Flytta det synliga området vid behov.
+                if(selectedIndex < firstVisible)
+                    firstVisible = selectedIndex;
+
+                if(selectedIndex >= firstVisible + visibleCount)
+                    firstVisible = selectedIndex - visibleCount + 1;
+
+                DrawOptions();
+            }
+
+        }
     }
+
 }

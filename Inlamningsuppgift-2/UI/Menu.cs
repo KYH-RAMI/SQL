@@ -9,6 +9,7 @@ namespace FailSafe_WeatherMonitor.UI
         {
             "Import Weather Data",
             "View Weather Data",
+            "Weather Data Statistics",
             "Exit"
     };
 
@@ -38,6 +39,10 @@ namespace FailSafe_WeatherMonitor.UI
                         case "View Weather Data":
                             await WeatherScreen.ShowAsync();
                             break;
+
+                        case "Weather Data Statistics":
+                              await WeatherStatisticsScreen.ShowAsync();
+                              break;
 
                         case "Exit":
                             return;
