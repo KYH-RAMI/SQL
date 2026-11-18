@@ -10,7 +10,8 @@ SQL Server & T-SQL – Course exercises, database design and practical projects.
 - [Lektion 03 – Extra](Lektion-03-Extra) – Previous exercises covering relationships (1:1, 1:N, M:N), normalization and database security, including SQLite
 - [Lektion 04](Lektion-04) – Indexing (Heap, Clustered & Nonclustered), Execution Plans, Query Optimization, SARGability, Covering Indexes & Least Privilege
 - [Inlämningsuppgift 1 – FailSafe IT](Inlamningsuppgift-1) – Relational database with ER diagram, normalization (3NF), SQL queries and DevSecOps considerations.
-
+- [Inlämningsuppgift 2 – FailSafe WeatherMonitor](Inlamningsuppgift-2) – .NET 11, EF Core 11, JSON import, database migrations & Azure SQL.
+  
 ## Technologies
 
 - Microsoft SQL Server
