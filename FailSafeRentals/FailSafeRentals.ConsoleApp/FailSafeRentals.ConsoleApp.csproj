@@ -12,11 +12,21 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="microsoft.EntityFrameworkCore.SqlServer" Version="11.0.0" />
     <PackageReference Include="microsoft.EntityFrameworkCore.Tools" Version="11.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FailSafeRentals.Core\FailSafeRentals.Core.csproj" />
+    <ProjectReference Include="..\FailSafeRentals.Data\FailSafeRentals.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="vehicles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

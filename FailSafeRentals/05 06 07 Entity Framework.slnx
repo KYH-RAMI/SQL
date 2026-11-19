@@ -3,4 +3,6 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="FailSafeRentals.ConsoleApp/FailSafeRentals.ConsoleApp.csproj" />
+  <Project Path="FailSafeRentals.Core/FailSafeRentals.Core.csproj" Id="eeec6a21-2c66-4592-adb4-93acee107b63" />
+  <Project Path="FailSafeRentals.Data/FailSafeRentals.Data.csproj" Id="c79a32ef-f50f-446b-aeec-9ce9678cc351" />
 </Solution>
