@@ -1,0 +1,38 @@
+# .github/workflows/dotnet-ci.yml
+name: FailSafeRentals CI
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build-and-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET 11
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '11.0.x'
+      - name: Build Release & Generate SQL Script
+        run: |
+          dotnet build FailSafeRentals.ConsoleApp/FailSafeRentals.ConsoleApp.csproj \
+            --configuration Release
+
+          dotnet tool install --global dotnet-ef
+
+          dotnet ef migrations script \
+            --idempotent \
+            --output release-migration.sql \
+            --project FailSafeRentals.ConsoleApp/FailSafeRentals.ConsoleApp.csproj
+
+          # Under lektion 6 ändras detta till:
+          # dotnet ef migrations script \
+          #   --idempotent \
+          #   --output release-migration.sql \
+          #   --project FailSafeRentals.Data/FailSafeRentals.Data.csproj \
+          #   --startup-project FailSafeRentals.ConsoleApp/FailSafeRentals.ConsoleApp.csproj
+
+      - name: Upload SQL Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: database-migration-sql
+          path: release-migration.sql
