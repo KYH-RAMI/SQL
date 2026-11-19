@@ -1,0 +1,11 @@
+@FailSafeRentals.Api_HostAddress = http://localhost:5032
+
+GET {{FailSafeRentals.Api_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{FailSafeRentals.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
