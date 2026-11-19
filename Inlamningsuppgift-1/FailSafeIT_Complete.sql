@@ -1,6 +1,7 @@
 -- =========================================================================
 -- FAILSAFE IT – INLÄMNINGSUPPGIFT 1
 -- Självständigt och upprepningsbart SQL-skript
+-- Alla constraints har explicita namn för enklare felsökning och underhåll.
 -- OBS: Databasen raderas och återskapas vid varje körning.
 -- =========================================================================
 
@@ -29,8 +30,12 @@ GO
 -- 1. Customers
 CREATE TABLE dbo.Customers
 (
-    CustomerID INT IDENTITY(1,1) PRIMARY KEY,
-    OrganizationNumber VARCHAR(10) NOT NULL UNIQUE,
+    CustomerID INT IDENTITY(1,1)
+        CONSTRAINT PK_Customers PRIMARY KEY,
+
+    OrganizationNumber VARCHAR(10) NOT NULL
+        CONSTRAINT UQ_Customers_OrganizationNumber UNIQUE,
+
     CompanyName NVARCHAR(100) NOT NULL,
     Email VARCHAR(100) NOT NULL,
     Phone VARCHAR(20) NOT NULL
@@ -40,10 +45,17 @@ GO
 -- 2. Consultants
 CREATE TABLE dbo.Consultants
 (
-    ConsultantID INT IDENTITY(1,1) PRIMARY KEY,
-    PersonalNumber VARCHAR(12) NOT NULL UNIQUE,
+    ConsultantID INT IDENTITY(1,1)
+        CONSTRAINT PK_Consultants PRIMARY KEY,
+
+    PersonalNumber VARCHAR(12) NOT NULL
+        CONSTRAINT UQ_Consultants_PersonalNumber UNIQUE,
+
     ConsultantName NVARCHAR(100) NOT NULL,
-    HourlyPrice DECIMAL(10, 2) NOT NULL CHECK (HourlyPrice >= 0),
+
+    HourlyPrice DECIMAL(10, 2) NOT NULL
+        CONSTRAINT CK_Consultants_HourlyPrice CHECK (HourlyPrice >= 0),
+
     Specialty NVARCHAR(100) NOT NULL
 );
 GO
@@ -51,17 +63,28 @@ GO
 -- 3. Assignments
 CREATE TABLE dbo.Assignments
 (
-    AssignmentID INT IDENTITY(1,1) PRIMARY KEY,
-    CustomerID INT NOT NULL REFERENCES dbo.Customers(CustomerID),
-    ConsultantID INT NOT NULL REFERENCES dbo.Consultants(ConsultantID),
+    AssignmentID INT IDENTITY(1,1)
+        CONSTRAINT PK_Assignments PRIMARY KEY,
+
+    CustomerID INT NOT NULL
+        CONSTRAINT FK_Assignments_Customers
+        REFERENCES dbo.Customers(CustomerID),
+
+    ConsultantID INT NOT NULL
+        CONSTRAINT FK_Assignments_Consultants
+        REFERENCES dbo.Consultants(ConsultantID),
+
     StartDate DATE NOT NULL,
     EndDate DATE NOT NULL,
     RoleDescription NVARCHAR(150) NOT NULL,
+
     CONSTRAINT CK_Assignments_Dates CHECK (EndDate >= StartDate)
 );
 GO
 
+-- =========================================================================
 -- DEL 2: Lägg in testdata
+-- =========================================================================
 
 -- 1. Customers
 INSERT INTO dbo.Customers (OrganizationNumber, CompanyName, Email, Phone)
@@ -89,7 +112,9 @@ VALUES
     (2, 1, '2026-08-01', '2026-10-31', 'Infrastructure Security Review');
 GO
 
+-- =========================================================================
 -- DEL 3: Frågor A–E
+-- =========================================================================
 
 -- FRÅGA A: Visa konsulter med timpris över 1 200, dyrast först
 SELECT ConsultantName, HourlyPrice
@@ -143,7 +168,8 @@ WHERE NOT EXISTS (
 GO
 
 -- DELETE är kommenterad för att undvika oavsiktlig radering.
--- OBS: FK FOREIGN KEY hindrar även radering om kunden har avslutade uppdrag.
+-- OBS: FK-begränsningarna hindrar radering av kunder som fortfarande
+-- har kopplade uppdrag, även om dessa uppdrag har avslutats.
 /*
 DELETE c
 FROM dbo.Customers AS c
